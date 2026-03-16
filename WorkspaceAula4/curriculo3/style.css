@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-de-estrutura-de-arame-geometrico-abstrato_52683-59421.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.perfil{
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #2E8B57;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2{
+    color: #006400;
+    font-size: 28px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+ul{
+    font-size: 18px;
+    color: #000080;
+}
+
+ol{
+    font-size: 18px;
+    color: #000080;
+}
+
+li{
+    font-size: 17px;
+    text-align: left;
+}
+
+p{
+    text-indent: 40px;
+}
+
+b{
+    font-weight: bold;
+}
+
+i{
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: #8B0000;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+mark{
+    font-variant: small-caps;
+}
