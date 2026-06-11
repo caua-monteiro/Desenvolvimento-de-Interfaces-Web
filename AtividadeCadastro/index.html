@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="form-wrap">
+        <aside class="brand">
+          <div class="logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <circle cx="12" cy="12" r="10" fill="#1e40af" />
+              <text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff" font-family="Arial" font-weight="700">IF</text>
+            </svg>
+          </div>
+          <h2>Cadastro</h2>
+          <p class="muted">Preencha os dados do aluno. Campos com * são obrigatórios.</p>
+        </aside>
+
+        <section class="form-area">
+          <h1>Cadastro de Aluno</h1>
+          <form id="cadForm" novalidate>
+            <div class="form-grid">
+              <div class="row">
+                <label for="nome">Nome *</label>
+                <input id="nome" name="nome" placeholder="Ex: João" required />
+                <div class="error" data-for="nome"></div>
+              </div>
+
+              <div class="row">
+                <label for="sobrenome">Sobrenome *</label>
+                <input id="sobrenome" name="sobrenome" placeholder="Ex: Silva" required />
+                <div class="error" data-for="sobrenome"></div>
+              </div>
+
+              <div class="row full">
+                <label for="mae">Nome Completo da Mãe *</label>
+                <input id="mae" name="mae" placeholder="Nome completo da mãe" required />
+                <div class="error" data-for="mae"></div>
+              </div>
+
+              <div class="row">
+                <label for="rg">RG *</label>
+                <input id="rg" name="rg" maxlength="12" placeholder="Somente números" required />
+                <div class="error" data-for="rg"></div>
+              </div>
+
+              <div class="row">
+                <label for="cpf">CPF *</label>
+                <input id="cpf" name="cpf" maxlength="14" placeholder="000.000.000-00" required />
+                <div class="error" data-for="cpf"></div>
+              </div>
+
+              <div class="row full">
+                <label for="endereco">Endereço *</label>
+                <input id="endereco" name="endereco" placeholder="Rua, número, bairro" required />
+                <div class="error" data-for="endereco"></div>
+              </div>
+
+              <div class="row">
+                <label for="ingresso">Forma de Ingresso *</label>
+                <select id="ingresso" name="ingresso" required>
+                  <option value="">Selecione...</option>
+                  <option>Vestibular</option>
+                  <option>Enem</option>
+                  <option>Transferência</option>
+                  <option>Outro</option>
+                </select>
+                <div class="error" data-for="ingresso"></div>
+              </div>
+
+              <div class="row">
+                <label for="login">Login *</label>
+                <input id="login" name="login" placeholder="nome.usuario" required />
+                <div class="error" data-for="login"></div>
+              </div>
+
+              <div class="row full">
+                <label for="senha">Senha * (8-16 caracteres)</label>
+                <div class="password-row">
+                  <input id="senha" name="senha" type="password" required minlength="8" maxlength="16" />
+                  <button type="button" id="togglePwd" aria-label="Mostrar senha">Mostrar</button>
+                </div>
+                <div class="error" data-for="senha"></div>
+                <small class="hint">Deve conter maiúscula, minúscula e caractere especial.</small>
+              </div>
+
+              <div class="row">
+                <label for="telefone">Telefone *</label>
+                <input id="telefone" name="telefone" placeholder="(11) 9xxxx-xxxx" required />
+                <div class="error" data-for="telefone"></div>
+              </div>
+
+              <div class="row">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" placeholder="exemplo@dominio.com" required />
+                <div class="error" data-for="email"></div>
+              </div>
+
+              <div class="row">
+                <label for="colegio">Colégio de Origem (opcional)</label>
+                <input id="colegio" name="colegio" />
+              </div>
+
+              <div class="row">
+                <label for="idade">Idade (opcional)</label>
+                <input id="idade" name="idade" type="number" min="0" max="150" />
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="actions">
+              <button type="submit">Cadastrar</button>
+            </div>
+            <div id="result" class="result" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

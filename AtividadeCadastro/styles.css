@@ -1,0 +1,226 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --primary: #2563eb;
+    /* azul calmo, contraste bom */
+    --accent: #0ea5a4;
+    /* verde-azulado para destaques */
+    --muted: #6b7280;
+    --error: #dc2626;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg), #eef3fb);
+    margin: 0;
+    padding: 28px;
+    color: #0f172a;
+}
+
+.container {
+    max-width: 760px;
+    margin: 28px auto;
+    padding: 28px 28px 22px 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), var(--card));
+    border-radius: calc(var(--radius) + 4px);
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+    border: 1px solid rgba(16, 24, 40, 0.03);
+}
+
+h1 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.6rem;
+    letter-spacing: 0.2px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0b1220;
+}
+
+input,
+select {
+    padding: 12px 14px;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: linear-gradient(180deg, #fff, #fbfdff);
+    transition: box-shadow .18s ease, transform .08s ease, border-color .12s ease;
+}
+
+input:hover,
+select:hover {
+    transform: translateY(-1px)
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+    border-color: var(--primary);
+}
+
+.password-row {
+    display: flex;
+    gap: 8px;
+}
+
+.password-row input {
+    flex: 1
+}
+
+#togglePwd {
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(17, 24, 39, 0.06);
+    background: linear-gradient(180deg, #fff, #f6fbff);
+    cursor: pointer;
+}
+
+.hint {
+    color: var(--muted);
+    font-size: .85rem;
+    margin-top: 6px
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, var(--primary), #1e4ed8);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.14);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18)
+}
+
+.error {
+    color: var(--error);
+    font-size: .88rem;
+    min-height: 18px;
+    margin-top: 6px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(15, 23, 42, 0.04);
+    margin: 16px 0
+}
+
+.result {
+    margin-top: 12px;
+    color: green;
+    font-weight: 600
+}
+
+@media(max-width:640px) {
+    .container {
+        padding: 16px
+    }
+
+    h1 {
+        font-size: 1.25rem
+    }
+}
+
+.form-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+.brand {
+    width: 180px;
+    padding: 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #eef6ff, #f8fbff);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+    text-align: center;
+    flex: 0 0 180px
+}
+
+.brand .logo {
+    margin: 6px auto 8px
+}
+
+.brand h2 {
+    margin: 6px 0 4px;
+    color: var(--primary);
+    font-size: 1.2rem
+}
+
+.brand .muted {
+    color: var(--muted);
+    font-size: .9rem
+}
+
+.form-area {
+    flex: 1;
+    min-width: 0
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.form-grid .row {
+    margin-bottom: 0
+}
+
+.form-grid .row.full {
+    grid-column: 1/-1
+}
+
+@media(min-width:640px) {
+    label {
+        font-size: .95rem
+    }
+}
+
+input::placeholder,
+select::placeholder {
+    color: rgba(15, 23, 42, 0.36)
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box
+}
+
+.brand svg {
+    max-width: 48px;
+    height: auto;
+    display: block;
+    margin: 0 auto
+}
